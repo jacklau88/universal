@@ -18,7 +18,6 @@ import {
 
 import { FileLoader } from './file-loader';
 import { REQUEST, RESPONSE } from './tokens/tokens';
-// import { REQUEST, RESPONSE } from './tokens';
 
 /**
  * These are the allowed options for the engine

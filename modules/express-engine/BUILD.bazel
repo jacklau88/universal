@@ -2,14 +2,15 @@ load("//tools:defaults.bzl", "ts_library", "ng_module", "ng_package")
 load("@build_bazel_rules_nodejs//:defs.bzl", "jasmine_node_test")
 
 ng_module(
-    name = "express-engine_module",
+    name = "express-engine",
+    module_name = "@nguniversal/express-engine",
     srcs = glob([
         "*.ts",
         "src/**/*.ts",
     ]),
     deps = [
       "@rxjs",
-      "//modules/express-engine/tokens"
+      # "//modules/express-engine/tokens"
      ],
 )
 
@@ -17,7 +18,7 @@ ng_package(
     name = "@nguniversal/express-engine",
     srcs = [
       ":package.json",
-      "//modules/express-engine/tokens:package.json",
+      # "//modules/express-engine/tokens:package.json",
     ],
     entry_point = "index.js",
     secondary_entry_points = ["tokens"],

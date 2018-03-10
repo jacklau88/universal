@@ -17,7 +17,7 @@ import {
 } from '@angular/platform-server';
 
 import { FileLoader } from './file-loader';
- import { REQUEST, RESPONSE } from '../tokens/index';
+ import { REQUEST, RESPONSE } from './tokens/tokens';
 
 /**
  * These are the allowed options for the engine

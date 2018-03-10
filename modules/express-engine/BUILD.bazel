@@ -9,7 +9,7 @@ ng_module(
     ]),
     deps = [
       "@rxjs",
-      "//modules/express-engine/src/tokens"
+      "//modules/express-engine/src/tokens:tokens"
      ],
 )
 
@@ -20,7 +20,7 @@ ng_package(
       "//modules/express-engine/src/tokens:package.json",
     ],
     entry_point = "index.js",
-    secondary_entry_points = ["tokens"],
+    secondary_entry_points = ["src/tokens"],
     deps = [":express-engine_module"],
 )
 

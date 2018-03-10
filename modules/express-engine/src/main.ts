@@ -17,7 +17,7 @@ import {
 } from '@angular/platform-server';
 
 import { FileLoader } from './file-loader';
-import { REQUEST, RESPONSE } from './tokens/tokens';
+ import { REQUEST, RESPONSE } from '../tokens/index';
 
 /**
  * These are the allowed options for the engine
@@ -154,7 +154,7 @@ function getReqResProviders(req: Request, res?: Response): StaticProvider[] {
       useValue: res
     });
   }
-  return providers;
+  return [];
 }
 
 /**

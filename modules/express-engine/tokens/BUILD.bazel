@@ -8,5 +8,6 @@ ng_module(
     name = "tokens",
     srcs = glob([
         "*.ts",
+        "src/*.ts"
     ]),
 )

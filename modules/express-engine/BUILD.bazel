@@ -7,14 +7,20 @@ ng_module(
         "*.ts",
         "src/**/*.ts",
     ]),
-    deps = ["@rxjs"],
+    deps = [
+      "@rxjs",
+      "//modules/express-engine/src/tokens"
+     ],
 )
 
 ng_package(
-
     name = "@nguniversal/express-engine",
-    srcs = [":package.json"],
+    srcs = [
+      ":package.json",
+      "//modules/express-engine/src/tokens:package.json",
+    ],
     entry_point = "index.js",
+    secondary_entry_points = ["tokens"],
     deps = [":express-engine_module"],
 )
 
